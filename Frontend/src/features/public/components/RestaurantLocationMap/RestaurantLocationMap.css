@@ -1,0 +1,67 @@
+.restaurant-location-map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  overflow: hidden;
+  background: #eef2f6;
+}
+
+.restaurant-location-map__canvas {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  font-family: Outfit, sans-serif;
+}
+
+.restaurant-location-map .leaflet-control-zoom {
+  overflow: hidden;
+  border: 1px solid #e4e7ec;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(16, 24, 40, 0.12);
+}
+
+.restaurant-location-map .leaflet-control-zoom a {
+  color: #344054;
+}
+
+.restaurant-location-map .leaflet-popup-content-wrapper {
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(16, 24, 40, 0.18);
+}
+
+.restaurant-map-popup {
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.restaurant-map-popup strong {
+  color: #1d2939;
+  font-size: 14px;
+}
+
+.restaurant-map-popup span {
+  color: #667085;
+  font-size: 12px;
+}
+
+.restaurant-map-popup button {
+  margin-top: 5px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 9px;
+  color: white;
+  background: #ff6347;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.restaurant-map-popup button:disabled {
+  color: #667085;
+  background: #eaecf0;
+  cursor: not-allowed;
+}

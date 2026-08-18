@@ -1,0 +1,49 @@
+.food-display{
+    margin-top: 30px;
+}
+
+.food-display h2{
+    font-size: max(2vw,24px);
+    font-weight: 600;
+}
+
+.food-display-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    margin-top: 30px;
+    gap: 30px;
+    row-gap: 50px;
+}
+
+.food-display-empty{
+    margin-top: 30px;
+    padding: 42px 24px;
+    border: 1px dashed #e4e7ec;
+    border-radius: 18px;
+    background: #fcfcfd;
+    color: #667085;
+    text-align: center;
+}
+
+.food-display-empty span{
+    display: inline-grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    background: #fff1ee;
+    color: tomato;
+    font-size: 27px;
+}
+
+.food-display-empty h3{
+    color: #344054;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.food-display-empty p{
+    margin-top: 6px;
+    font-size: 14px;
+}

@@ -1,0 +1,54 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: innovarest_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: innovarest
+      MYSQL_USER: innovarest_app
+      MYSQL_PASSWORD: innovarest123
+      MYSQL_ROOT_PASSWORD: root123
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./Database/innovarest.sql:/docker-entrypoint-initdb.d/innovarest.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot123"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+
+  backend:
+    build:
+      context: ./Backend
+    container_name: innovarest_backend
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_NAME: innovarest
+      DB_USER: innovarest_app
+      DB_PASSWORD: innovarest123
+      DB_HOST: db
+      DB_PORT: 3306
+    ports:
+      - "8000:8000"
+    
+
+  frontend:
+    build:
+      context: ./Frontend
+    container_name: innovarest_frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      VITE_PROXY_TARGET: http://backend:8000
+    ports:
+      - "5173:5173"
+
+volumes:
+  mysql_data:

@@ -1,0 +1,25 @@
+INNOVAREST - CREDENCIALES DE PRUEBA
+
+CLIENTE
+Correo: cliente.demo@innovarest.test
+Contraseña: InnovaRest123!
+Acceso: Landing y perfil del cliente
+
+RESTAURANTE - VERDE INNOVA
+Correo: restaurante.demo@innovarest.test
+Contraseña: InnovaRest123!
+Acceso: Panel del restaurante
+
+RESTAURANTE - RESTAURANTE PRUEBA
+Correo: admin.restaurante.prueba@innovarest.test
+Contraseña: Restaurante123!
+Acceso: Panel del restaurante
+
+SUPERADMINISTRADOR
+Correo: superadmin.demo@innovarest.test
+Contraseña: InnovaRest123!
+Acceso: Panel del superadministrador
+
+NOTA:
+Estas credenciales son exclusivamente para fines académicos y de demostración.
+No corresponden a usuarios reales ni deben reutilizarse en otros sistemas.
